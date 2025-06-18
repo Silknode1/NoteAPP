@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cognitive Gymnasium</title>
+</head>
+<body>
+    <header class="app-header">
+        <h1>Cognitive Gymnasium</h1>
+        <div class="user-profile">
+            <img src="user-icon.png" alt="User Profile" />
+        </div>
+    </header>
+    <div class="main-layout">
+        <aside class="left-sidebar">
+            <h2>Daily Notes</h2>
+            <ul id="notes-list">
+                <li>Note 1</li>
+                <li>Note 2</li>
+                <li>Note 3</li>
+            </ul>
+            <button id="new-note-btn">New Note</button>
+        </aside>
+        <main class="center-pane">
+            <textarea id="note-editor" placeholder="Capture your thoughts..."></textarea>
+            <button id="link-note-btn">Link to Another Note</button>
+            <div id="mind-map">
+                <!-- Placeholder for mind map visualization -->
+                <p>Mind Map Visualization Area</p>
+            </div>
+        </main>
+        <aside class="right-sidebar">
+            <h2>Connections</h2>
+            <ul id="connections-list">
+                <li>Connection 1</li>
+                <li>Connection 2</li>
+                <li>Connection 3</li>
+            </ul>
+        </aside>
+    </div>
+    <button class="quick-capture" id="quick-capture-btn">+</button>
+</body>
+</html>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.app-header {
+    background-color: #4A90E2;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-layout {
+    display: flex;
+    flex-grow: 1;
+}
+
+.left-sidebar, .right-sidebar {
+    background-color: #F5F5F5;
+    width: 250px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.center-pane {
+    flex-grow: 1;
+    padding: 15px;
+    background-color: white;
+}
+
+#note-editor {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 15px;
+}
+
+#mind-map {
+    height: 400px; /* Placeholder for mind map visualization */
+    background-color: #E8E8E8;
+    border: 1px solid #B0B0B0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quick-capture {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4A90E2;
+    color: white;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
